@@ -1,5 +1,5 @@
 
-This lightweight module provides an easy way to version static files (images, stylesheets, javascript etc.), which, when combined with some cache-friendly server configuration, improves rendering time of your pages.
+This module provides an easy way to version static files (images, stylesheets, javascript etc.), which, when combined with some cache-friendly server configuration, can improve the rendering time of your pages.
 
 ## Installation
 
@@ -65,8 +65,8 @@ The module provides a view helper that will, for a given file path, return the s
 
 this will output:
 
-   <link rel="stylesheet" type="text/css" href="/css/style.mwq02x.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.mwq02x.css">
 
 (where `mwq02x` is a hash uniquely generated based on the last modified time of the file).
 
-Whenever the stylesheet is modified, the hash will change automatically.
+Assuming your expires headers are setup as suggested above, the browser will then cache this file for up to 60 days, and won't rerequest it as the user browses around your site. However if you modify the file, the hash will change automatically, the browser will see it as a different file and rerequest it from the server.
