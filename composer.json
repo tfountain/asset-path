@@ -1,0 +1,21 @@
+{
+    "name": "tfountain/asset-path",
+    "description": "Simple ZF2 module for asset versioning",
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "psr-0": {
+            "TfAssetPath": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    },
+    "authors": [{
+        "name": "Tim Fountain",
+        "email": "tim@tfountain.co.uk",
+        "homepage": "http://tfountain.co.uk/"
+    }],
+    "require": {
+        "php": ">=5.3.3"
+    }
+}
